@@ -6,6 +6,12 @@ export interface IBuildPaths {
     html: string;
 }
 
+export interface IBuildEnv {
+    mode: BuildModeType;
+    port: number;
+}
+
+
 export interface IBuildOptions {
     mode: BuildModeType;
     paths: IBuildPaths;
