@@ -1,5 +1,5 @@
 {
-  "name": "production_project_code_course",
+  "name": "production_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/utimur/production_project_code_source.git"
+    "url": "git+https://github.com/kochnev93/project.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "kochnev93",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/utimur/production_project_code_source/issues"
-  },
-  "homepage": "https://github.com/utimur/production_project_code_source#readme",
   "devDependencies": {
     "@types/node": "^17.0.21",
     "@types/webpack": "^5.28.0",
