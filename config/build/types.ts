@@ -11,7 +11,6 @@ export interface IBuildEnv {
     port: number;
 }
 
-
 export interface IBuildOptions {
     mode: BuildModeType;
     paths: IBuildPaths;
