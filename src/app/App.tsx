@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import { AboutPage, MainPage } from "pages";
+import React from "react";
+import { Link } from "react-router-dom";
 import { cn } from "shared/utils";
 import { useTheme } from "app/providers/ThemeProvider";
+import { AppRouter } from "app/providers/AppRouter";
 import "./styles/index.scss";
 
 export const App = (): React.ReactElement => {
@@ -13,12 +13,7 @@ export const App = (): React.ReactElement => {
             <button onClick={toggleTheme}>TOGGLE</button>
             <Link to={"/"}>Главная</Link>
             <Link to={"/about"}>О нас</Link>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={"/about"} element={<AboutPage />} />
-                    <Route path={"/"} element={<MainPage />} />
-                </Routes>
-            </Suspense>
+            <AppRouter />
         </div>
     );
 };
