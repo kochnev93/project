@@ -1,30 +1,45 @@
 {
-  "name": "production_project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack serve --env port=3000",
-    "build:production": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kochnev93/project.git"
-  },
-  "keywords": [],
-  "author": "kochnev93",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/webpack": "^5.28.0",
-    "@types/webpack-dev-server": "^4.7.2",
-    "html-webpack-plugin": "^5.5.0",
-    "ts-loader": "^9.2.6",
-    "ts-node": "^10.5.0",
-    "typescript": "^4.5.5",
-    "webpack": "^5.69.1",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.7.4"
-  }
+    "name": "production_project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack serve --env port=3000",
+        "build:production": "webpack --env mode=production",
+        "build:dev": "webpack --env mode=development",
+        "prettier": "prettier . --write"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kochnev93/project.git"
+    },
+    "keywords": [],
+    "author": "kochnev93",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^17.0.21",
+        "@types/react": "^18.3.11",
+        "@types/react-dom": "^18.3.0",
+        "@types/react-router-dom": "^5.3.3",
+        "@types/webpack": "^5.28.0",
+        "@types/webpack-dev-server": "^4.7.2",
+        "css-loader": "^7.1.2",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.9.1",
+        "prettier": "^3.3.3",
+        "sass": "^1.79.4",
+        "sass-loader": "^16.0.2",
+        "style-loader": "^4.0.0",
+        "ts-loader": "^9.2.6",
+        "ts-node": "^10.5.0",
+        "typescript": "^4.5.5",
+        "webpack": "^5.69.1",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.7.4"
+    },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.27.0"
+    }
 }
