@@ -5,6 +5,20 @@ import { IBuildOptions } from "./types";
 export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
     const { isDev } = options;
 
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+        use: [
+            {
+                loader: "file-loader",
+            },
+        ],
+    };
+
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+    };
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -28,5 +42,5 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    return [tsLoader, cssLoader];
+    return [fileLoader, svgLoader, tsLoader, cssLoader];
 }
