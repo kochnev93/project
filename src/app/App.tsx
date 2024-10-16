@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { cn } from "shared/utils";
 import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "app/providers/AppRouter";
@@ -12,11 +12,13 @@ export const App = (): React.ReactElement => {
 
     return (
         <div className={cn("app", {}, [theme])}>
-            <Header />
-            <div className="content-page">
-                <Sidebar />
-                <AppRouter />
-            </div>
+            <Suspense fallback="">
+                <Header />
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     );
 };
