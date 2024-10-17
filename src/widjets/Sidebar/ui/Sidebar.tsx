@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { cn } from "shared/utils";
-import * as style from "./Sidebar.module.scss";
-import { ToggleTheme } from "widjets/ToggleTheme";
-import { ToggleLang } from "widjets/ToggleLang";
+import React, { useState } from 'react';
+import { cn } from 'shared/utils';
+import { ToggleTheme } from 'widjets/ToggleTheme';
+import { ToggleLang } from 'widjets/ToggleLang';
+import * as style from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -19,7 +19,9 @@ export const Sidebar = (props: SidebarProps) => {
 
     return (
         <div className={cn(style.Sidebar, { [style.collapsed]: collapsed }, [className])}>
-            <button onClick={handleToggle}>toggle</button>
+            <button type="button" onClick={handleToggle}>
+                toggle
+            </button>
             <ToggleTheme />
             <ToggleLang />
         </div>

@@ -1,7 +1,7 @@
-import React from "react";
-import { cn } from "shared/utils";
-import * as style from "./ToggleLang.module.scss";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { cn } from 'shared/utils';
+import { useTranslation } from 'react-i18next';
+import * as style from './ToggleLang.module.scss';
 
 interface ToggleLangProps {
     className?: string;
@@ -11,12 +11,12 @@ export const ToggleLang = (props: ToggleLangProps) => {
     const { t, i18n } = useTranslation();
 
     const toggleLang = () => {
-        i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
     return (
-        <button className={cn(style.ToggleLang, {}, [className])} onClick={toggleLang}>
-            {i18n.language === "ru" ? "RU" : "EN"}
+        <button type="button" className={cn(style.ToggleLang, {}, [className])} onClick={toggleLang}>
+            {i18n.language === 'ru' ? 'RU' : 'EN'}
         </button>
     );
 };
