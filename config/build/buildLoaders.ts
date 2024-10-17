@@ -5,6 +5,18 @@ import { IBuildOptions } from "./types";
 export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
     const { isDev } = options;
 
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ["@babel/preset-env"],
+                plugins: [["i18next-extract", { locales: ["ru", "en"], keyAsDefaultValue: true }]],
+            },
+        },
+    };
+
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff|woff2)$/i,
         use: [
@@ -42,5 +54,5 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    return [fileLoader, svgLoader, tsLoader, cssLoader];
+    return [fileLoader, svgLoader, babelLoader, tsLoader, cssLoader];
 }
