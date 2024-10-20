@@ -1,6 +1,6 @@
-import { Context } from "./context";
-import { LOCAL_STORAGE_THEME_KEY, ThemeEnum } from "./types";
-import { useContext } from "react";
+import { useContext } from 'react';
+import { Context } from './context';
+import { LOCAL_STORAGE_THEME_KEY, ThemeEnum } from './types';
 
 interface UseThemeResult {
     toggleTheme: () => void;

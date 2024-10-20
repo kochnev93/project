@@ -1,7 +1,7 @@
-import React from "react";
-import { cn } from "shared/utils";
-import * as style from "./Link.module.scss";
-import { Link, LinkProps } from "react-router-dom";
+import React from 'react';
+import { cn } from 'shared/utils';
+import { Link, LinkProps } from 'react-router-dom';
+import * as style from './Link.module.scss';
 
 interface AppLinkProps extends LinkProps {
     className?: string;
