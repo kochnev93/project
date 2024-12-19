@@ -3,5 +3,7 @@
   "Перевод": "Translate",
   "Страница не найдена": "Not Found",
   "Главная": "Main",
-  "О нас":  "About"
+  "О нас":  "About",
+  "Похоже, что-то пошло не так!": "Something went wrong",
+  "Обновить страницу": "Reload page"
 }
