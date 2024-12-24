@@ -13,10 +13,14 @@ export const App = (): React.ReactElement => {
     return (
         <div className={cn('app', {}, [theme])}>
             <Suspense fallback={<PageLoader />}>
-                <Header />
-                <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
+                <div className="page-wrapper">
+                    <div className="main-container">
+                        <Sidebar />
+                        <div className="app-container">
+                            <Header />
+                            <AppRouter />
+                        </div>
+                    </div>
                 </div>
             </Suspense>
         </div>
