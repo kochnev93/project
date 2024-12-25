@@ -17,8 +17,6 @@ export const Menu = (props: MenuProps) => {
     const { t } = useTranslation();
     const { pathname } = useLocation();
 
-    console.log(pathname);
-
     return (
         <ul className={cn(style.Menu, {}, [className])}>
             <li

@@ -16,7 +16,7 @@
     color: #fff;
     min-height: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 
     a {
         display: flex;
@@ -35,6 +35,7 @@
     }
 
     span {
+        transition: visibility 0.1s ease;
         visibility: visible;
     }
 
@@ -46,10 +47,8 @@
         }
     }
 
-    &.collapsed {
-        span {
-            visibility: hidden;
-        }
+    &.collapsed span {
+        visibility: hidden;
     }
 
     &:hover {

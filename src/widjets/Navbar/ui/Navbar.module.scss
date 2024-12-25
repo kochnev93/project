@@ -14,6 +14,13 @@
         width 0.3s ease;
     overflow: hidden;
 
+    &.hover {
+        width: var(--navbar-width) !important;
+        a > span {
+            visibility: visible;
+        }
+    }
+
     &.close {
         width: var(--navbar-width-closed);
     }
