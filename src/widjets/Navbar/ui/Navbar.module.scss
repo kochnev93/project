@@ -1,25 +1,17 @@
 .Sidebar {
     background: #353c48;
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgb(0 0 0 / 25%);
     width: var(--sidebar-width);
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 11;
-    -webkit-transition:
-        left 0.3s ease,
-        width 0.3s ease;
     transition:
         left 0.3s ease,
         width 0.3s ease;
 
-    &:hover {
-        width: var(--sidebar-width) !important;
-        cursor: pointer;
-    }
-
-    &.collapsed {
+    &.close {
         width: var(--sidebar-width-collapsed);
     }
 }

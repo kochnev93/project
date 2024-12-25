@@ -1,7 +1,5 @@
-export interface AppSettingsType {
-    navbarIsOpen: boolean;
-}
+import { SettingsType } from 'entities/Settings';
 
-export interface StateType {
-    // appSettings: AppSettingsType;
-}
+export type StateType = {
+    settings: SettingsType;
+};

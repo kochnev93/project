@@ -3,7 +3,7 @@ import { cn } from 'shared/utils';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/AppRouter';
 import { Header } from 'widjets/Header';
-import { Sidebar } from 'widjets/Sidebar';
+import { Navbar } from 'widjets/Navbar';
 import { PageLoader } from 'shared/ui/Loaders';
 import './styles/index.scss';
 
@@ -15,7 +15,7 @@ export const App = (): React.ReactElement => {
             <Suspense fallback={<PageLoader />}>
                 <div className="page-wrapper">
                     <div className="main-container">
-                        <Sidebar />
+                        <Navbar />
                         <div className="app-container">
                             <Header />
                             <AppRouter />
