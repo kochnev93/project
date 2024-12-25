@@ -5,27 +5,29 @@
 
 .app {
     font: var(--font-m);
-    background: var(--bg-color);
-    color: var(--primary-color);
+    background: var(--color-dark3);
+    color: var(--color-white);
     min-height: 100vh;
 }
 
 .main-container {
-    display: flex;
-    align-items: flex-start;
+    padding-left: var(--navbar-width-closed);
+    transition: padding-left 0.3s ease;
+
+    &.compact {
+        padding-left: var(--navbar-width);
+    }
 }
 
 .app-container {
     display: flex;
     flex-direction: column;
-    flex: 1 0 0;
 }
 
 .content-page {
     display: flex;
+    background: var(--color-dark3);
 }
 
 .page-wrapper {
-    padding: 20px;
-    flex-grow: 1;
 }

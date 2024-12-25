@@ -1,10 +1,10 @@
 import React from 'react';
 import { cn } from 'shared/utils';
-import { ToggleTheme } from 'widjets/ToggleTheme';
-import { ToggleLang } from 'widjets/ToggleLang';
 import { getStatusNavbar, settingsActions } from 'entities/Settings';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import * as style from './Navbar.module.scss';
+import { Logo, Profile, Menu } from './components';
 
 interface NavbarProps {
     className?: string;
@@ -13,6 +13,7 @@ interface NavbarProps {
 export const Navbar = (props: NavbarProps): React.ReactElement => {
     const { className } = props;
 
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const isOpen = useSelector(getStatusNavbar);
 
@@ -30,8 +31,16 @@ export const Navbar = (props: NavbarProps): React.ReactElement => {
             onMouseLeave={handleMouseLeave}
             onMouseEnter={handleMouseEnter}
         >
-            <ToggleTheme />
-            <ToggleLang />
+            <Logo />
+            <Profile />
+            <Menu collapsed={!isOpen} />
+
+            {/* <ul> */}
+            {/*     <Link to="/">{t('Главная')}</Link> */}
+            {/*     <Link to="/about">{t('О нас')}</Link> */}
+            {/* </ul> */}
+            {/* <ToggleTheme /> */}
+            {/* <ToggleLang /> */}
         </nav>
     );
 };

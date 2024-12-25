@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from 'shared/utils';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import * as style from './Header.module.scss';
 
@@ -14,8 +13,8 @@ export const Header = (props: HeaderProps) => {
 
     return (
         <div className={cn(style.header, {}, [className])}>
-            <Link to="/">{t('Главная')}</Link>
-            <Link to="/about">{t('О нас')}</Link>
+            {/* <Link to="/">{t('Главная')}</Link> */}
+            {/* <Link to="/about">{t('О нас')}</Link> */}
         </div>
     );
 };

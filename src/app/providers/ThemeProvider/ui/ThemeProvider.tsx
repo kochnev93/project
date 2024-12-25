@@ -2,7 +2,7 @@ import React, { FC, useMemo, useState, PropsWithChildren } from 'react';
 import { LOCAL_STORAGE_THEME_KEY, ThemeEnum } from '../model/types';
 import { Context } from '../model/context';
 
-const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeEnum) || ThemeEnum.LIGHT;
+const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeEnum) || ThemeEnum.DARK;
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
     const [theme, setTheme] = useState<ThemeEnum>(defaultTheme);
