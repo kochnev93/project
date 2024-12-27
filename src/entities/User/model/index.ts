@@ -1,3 +1,3 @@
 export { userReducer } from './slice';
-// export * from './selectors';
 export * from './types';
+export { userApi } from './api';

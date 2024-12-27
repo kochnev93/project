@@ -37,15 +37,26 @@ server.post('/login', (req, res) => {
     }
 });
 
+server.get('/posts', (req, res) => {
+    try {
+        const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+        const { posts = [] } = db;
+        return res.json(posts);
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({ message: e.message });
+    }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line
-server.use((req, res, next) => {
-    if (!req.headers.authorization) {
-        return res.status(403).json({ message: 'AUTH ERROR' });
-    }
-
-    next();
-});
+// server.use((req, res, next) => {
+//     if (!req.headers.authorization) {
+//         return res.status(403).json({ message: 'AUTH ERROR' });
+//     }
+//
+//     next();
+// });
 
 server.use(router);
 
